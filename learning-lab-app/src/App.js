@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
-// class App extends Component {
-//   state = {users: []}
+class App extends Component {
+ // state = {users: []}
 //
 //   componentDidMount() {
 //     fetch('/users')
@@ -14,9 +14,7 @@ import './App.css';
     return (
       <div className="App">
         <h1>Users</h1>
-        {this.state.users.map(user =>
-          <div key={user.id}>{user.username}</div>
-        )}
+        Emmett and Jimmy
       </div>
     );
   }
