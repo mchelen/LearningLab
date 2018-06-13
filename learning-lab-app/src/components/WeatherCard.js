@@ -1,20 +1,19 @@
 import React from 'react';
-import { Card, Icon, Image } from 'semantic-ui-react'
+import ZipForm from "./WeatherCard/ZipForm";
+import { Card } from 'semantic-ui-react'
 
 const WeatherCard = () => (
   <Card>
-    <img src="https://placeimg.com/290/290/any" />
+    <img src="https://placeimg.com/290/290/any" alt="Weather Placeholder"/>
     <Card.Content>
       <Card.Header>City, State</Card.Header>
       <Card.Meta>
-        <span className='date'>Time</span>
+        <span className='time'>Time</span>
       </Card.Meta>
       <Card.Description>Weather in Farenheit</Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <a>
-        <p> add form here to change zipcode? </p>
-      </a>
+      <ZipForm />
     </Card.Content>
   </Card>
 )
