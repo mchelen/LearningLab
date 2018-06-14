@@ -9,7 +9,7 @@ export class WeatherData extends Component{
 	constructor(props){
 		super(props);
 		this.state = {
-			weather: null
+			weather: weatherdefault
 		}
 		this.refreshData();
 	}
@@ -17,7 +17,7 @@ export class WeatherData extends Component{
 	refreshData(){
 		getWeather((err, res, body) => this.setState({
 			weather: body
-		}));
+		}), this.props.type, this.props.location, this.props.units);
 	}
 
 	render(){
@@ -27,11 +27,17 @@ export class WeatherData extends Component{
 	}
 }
 
-function getWeather(callback){
+function getWeather(callback, type, location, units){
 	const apikey = fs.readFileSync('../.apikey');
-	const cityid = '4744725';
+	var locstring;
+	if(location.type === 'coords'){
+		locstring = 'lat='+location.lat+'&lon='+location.lon;
+	}else{
+		locstring = location.type+'='+location.loc;
+	}
+	var qstring = type+'?'+locstring+'&units='+units+'&APPID='+apikey;
 	var options = {
-		url: 'http://api.openweathermap.org/data/2.5/weather?id='+cityid+'&units=imperial&APPID='+apikey,
+		url: 'http://api.openweathermap.org/data/2.5/'+qstring,
 		json: true
 	};
 
