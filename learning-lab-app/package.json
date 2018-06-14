@@ -8,8 +8,6 @@
     "react-scripts": "1.1.4",
     "react-time": "^4.3.0",
     "request": "^2.87.0",
-    "semantic-ui": "^2.3.1",
-    "semantic-ui-css": "^2.3.1",
     "semantic-ui-react": "^0.81.1"
   },
   "scripts": {
@@ -21,8 +19,6 @@
   },
   "proxy": "http://localhost:3001",
   "devDependencies": {
-    "coveralls": "^3.0.1",
-    "jest": "^23.1.0",
-    "jest-enzyme": "^6.0.1"
+    "coveralls": "^3.0.1"
   }
 }
