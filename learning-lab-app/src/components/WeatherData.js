@@ -26,6 +26,9 @@ class WeatherCaller extends Component{
 
 	refreshData(){
 		let useGeo = this.props.isGeolocationAvailable && this.props.isGeolocationEnabled;
+		if(!this.props.coords){
+			return;
+		}
 		let loc = useGeo ? (
 			{type: 'coords', lat: this.props.coords.latitude, lon: this.props.coords.longitude}
 		) : this.props.location;	
@@ -36,7 +39,7 @@ class WeatherCaller extends Component{
 
 	render(){
 		return (
-			<WeatherCard data=this.state.weather />
+			<WeatherCard data={this.state.weather} />
 		);
 	}
 }
