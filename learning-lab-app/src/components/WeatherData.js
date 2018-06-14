@@ -28,7 +28,7 @@ export default class WeatherData extends Component{
 
 function getWeather(callback, type, location, units){
 	const apikey = '9dd566342853579b7ca76a7f2125741e';
-	var qstring = type+'?'+location.type+'='+location.loc++'&units='+units+'&APPID='+apikey;
+	var qstring = type+'?'+location.type+'='+location.loc+'&units='+units+'&APPID='+apikey;
 	var options = {
 		url: 'http://api.openweathermap.org/data/2.5/'+qstring,
 		json: true
