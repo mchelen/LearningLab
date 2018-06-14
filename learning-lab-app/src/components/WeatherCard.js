@@ -14,7 +14,9 @@ const WeatherCard = (props) => (
         <Time />
         </span>
       </Card.Meta>
-        <Card.Description>{JSON.stringify(props.data)}</Card.Description>
+        <Card.Description>
+        {JSON.stringify(props.data)}
+        </Card.Description>
     </Card.Content>
     <Card.Content extra>
       <ZipForm />
