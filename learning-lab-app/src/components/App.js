@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from "./Header";
-import WeatherCard from "./WeatherCard";
+import WeatherData from "./WeatherData.js";
 
 
 import './App.css';
@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div className = "App">
         <Header />
-        <WeatherCard />
+        <WeatherData type="weather" units="imperial" geo={true} />
       </div>
     );
   }
