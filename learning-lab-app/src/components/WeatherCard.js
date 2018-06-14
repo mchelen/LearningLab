@@ -3,7 +3,7 @@ import ZipForm from "./WeatherCard/ZipForm";
 import Time from "./WeatherCard/Time";
 import { Card } from 'semantic-ui-react'
 
-const WeatherCard = () => (
+const WeatherCard = (props) => (
   <div className = "ui centered card">
   <Card>
     <img src="https://placeimg.com/290/290/any" alt="Weather Placeholder"/>
@@ -14,7 +14,7 @@ const WeatherCard = () => (
         <Time />
         </span>
       </Card.Meta>
-        <Card.Description>Weather in Farenheit</Card.Description>
+        <Card.Description>{JSON.stringify(props.data)}</Card.Description>
     </Card.Content>
     <Card.Content extra>
       <ZipForm />

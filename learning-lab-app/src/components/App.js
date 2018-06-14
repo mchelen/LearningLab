@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div className = "App">
         <Header />
-        <WeatherData type="weather" units="imperial" geo={true} />
+        <WeatherData geo={true} type="weather" units="imperial" location={{type: 'zip', loc: '22209'}} />
       </div>
     );
   }

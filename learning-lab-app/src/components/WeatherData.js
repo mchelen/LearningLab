@@ -3,7 +3,6 @@ import {geolocated} from 'react-geolocated';
 import WeatherCard from './WeatherCard.js';
 
 var request = require('request');
-var fs = require('fs');
 
 export default function WeatherData(props){
 	let GeoWeatherCaller = geolocated()(WeatherCaller);
@@ -26,10 +25,8 @@ class WeatherCaller extends Component{
 
 	refreshData(){
 		let useGeo = this.props.isGeolocationAvailable && this.props.isGeolocationEnabled;
-		if(!this.props.coords){
-			return;
-		}
-		let loc = useGeo ? (
+		console.log(this.props.coords);
+		let loc = (useGeo && this.props.coords) ? (
 			{type: 'coords', lat: this.props.coords.latitude, lon: this.props.coords.longitude}
 		) : this.props.location;	
 		getWeather((err, res, body) => this.setState({
@@ -45,7 +42,7 @@ class WeatherCaller extends Component{
 }
 
 function getWeather(callback, type, location, units){
-	const apikey = fs.readFileSync('../../.apikey');
+	const apikey = '9dd566342853579b7ca76a7f2125741e';
 	var locstring;
 	if(location.type === 'coords'){
 		locstring = 'lat='+location.lat+'&lon='+location.lon;
