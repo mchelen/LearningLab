@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "node"
 before_script: "cd learning-lab-app"
-script: "npm run coverage"
+script: "npm install && npm run coverage"
 cache:
   directories:
     - "node_modules"
