@@ -16,7 +16,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "coverage": "react-scripts test --env=jsdom --coverage"
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:3001",
+  "devDependencies": {
+    "coveralls": "^3.0.1",
+    "jest": "^23.1.0",
+    "jest-enzyme": "^6.0.1"
+  }
 }

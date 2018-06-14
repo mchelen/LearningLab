@@ -4,7 +4,7 @@ import Time from "./WeatherCard/Time";
 import { Card } from 'semantic-ui-react'
 
 const WeatherCard = () => (
-  <div class = "ui centered card">
+  <div className = "ui centered card">
   <Card>
     <img src="https://placeimg.com/290/290/any" alt="Weather Placeholder"/>
     <Card.Content>
