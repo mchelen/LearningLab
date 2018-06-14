@@ -4,21 +4,24 @@ var request = require('request');
 var fs = require('fs');
 
 const weatherdefault = {};
-const WeatherContext = React.createContext(weatherdefault);
-
-export default class WeatherData extends Component{
+export const WeatherContext = React.createContext(weatherdefault);
+export class WeatherData extends Component{
 	constructor(props){
 		super(props);
 		this.state = {
 			weather: null
 		}
+		this.refreshData();
+	}
+
+	refreshData(){
 		getWeather((err, res, body) => this.setState({
 			weather: body
 		}));
 	}
 
 	render(){
-		<WeatherContext.Provider value={this.state.weather)>
+		<WeatherContext.Provider value={this.state.weather}>
 			{this.props.children}
 		</WeatherContext.Provider>
 	}
