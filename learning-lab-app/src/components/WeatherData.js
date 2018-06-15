@@ -16,10 +16,17 @@ export default class WeatherData extends Component{
         this.refreshData();
     }
 
+    componentDidMount(){
+        this.updateTimer = setInterval(() => this.refreshData(), 60000);
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.updateTimer);
+    }
+
     handleZipChange(event){
         this.setState({zipcode: event.target.value}, () => {
             if(this.state.zipcode.match(/^[0-9]{5}$/)){ //make sure it's a zip code
-                console.log(this.state.zipcode);
                 this.refreshData();
             }
         });
