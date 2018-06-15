@@ -1,3 +1,7 @@
 .temperature {
     font-size: xx-large;
 }
+
+.weatherIcon {
+    background-color: rgba(0, 0, 0, 0) !important;
+}

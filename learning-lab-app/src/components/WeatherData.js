@@ -8,7 +8,7 @@ export default class WeatherData extends Component{
         super(props);
         this.state = {
             weather: null
-        }
+        };
         this.refreshData = this.refreshData.bind(this);
         this.refreshData();
     }
