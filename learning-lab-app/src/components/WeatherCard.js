@@ -16,7 +16,7 @@ export default class WeatherCard extends Component{
             <Card>
                 <Image className='weatherIcon' src={weatherIcon} size='small' centered />
                 <Card.Content>
-                    <Card.Header>City, State</Card.Header>
+                    <Card.Header>Arlington, Virginia</Card.Header>
                     <Card.Meta>
                         <span className='time'>
                         <Time />
