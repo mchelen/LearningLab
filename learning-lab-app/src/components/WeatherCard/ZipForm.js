@@ -1,13 +1,13 @@
 import React from 'react'
 import { Form } from 'semantic-ui-react'
 
-const FormExampleField = () => (
-  <Form>
-    <Form.Field>
-      <label>Zip Code</label>
-      <input />
-    </Form.Field>
-  </Form>
-)
+const ZipForm = (props) => (
+    <Form>
+        <Form.Field>
+            <label>Zip Code</label>
+            <input value={props.value} onChange={props.handler} />
+        </Form.Field>
+    </Form>
+);
 
-export default FormExampleField
+export default ZipForm;

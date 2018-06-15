@@ -5,12 +5,16 @@ import Time from "./WeatherCard/Time";
 
 import './WeatherCard.css';
 
-export default class WeatherCard extends Component{ 
+export default class WeatherCard extends Component{
     render(){
-        let temperature = this.props.data ? this.props.data.main.temp : null;
-        let weatherIcon = this.props.data ?
-            'http://openweathermap.org/img/w/'+this.props.data.weather[0].icon+'.png' :
-            null;
+        let temperature, weatherIcon;
+        try{
+            temperature = this.props.data.main.temp;
+            weatherIcon = 'http://openweathermap.org/img/w/'+this.props.data.weather[0].icon+'.png';
+        }catch(e){
+            temperature = null;
+            weatherIcon = null;
+        }
         return (
             <div className = "ui centered card">
             <Card>
@@ -27,7 +31,7 @@ export default class WeatherCard extends Component{
                         </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                    <ZipForm />
+                    <ZipForm value={this.props.zipcode} handler={this.props.handleZipChange} />
                 </Card.Content>
             </Card>
             </div>
