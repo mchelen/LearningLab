@@ -8,7 +8,8 @@ export default class WeatherData extends Component{
         super(props);
         this.state = {
             weather: null,
-            zipcode: this.props.zipcode
+            zipcode: this.props.zipcode,
+            city: null
         };
         this.handleZipChange = this.handleZipChange.bind(this);
         this.refreshData = this.refreshData.bind(this);
@@ -28,12 +29,13 @@ export default class WeatherData extends Component{
         getWeather((err, res, body) => this.setState({
             weather: body
         }), this.props.type, this.state.zipcode, this.props.units);
+        getCity((err, res, body) => this.setState(parseCity(body)), this.state.zipcode);
     }
 
     render(){
         return (
             <WeatherCard data={this.state.weather} zipcode={this.state.zipcode} 
-            handleZipChange={this.handleZipChange} />
+            handleZipChange={this.handleZipChange} city={this.state.city} />
         );
     }
 }
@@ -47,4 +49,23 @@ function getWeather(callback, type, zipcode, units){
     };
 
     request(options, callback);
+}
+
+function getCity(callback, zipcode){
+    var options = {
+        url: 'http://maps.googleapis.com/maps/api/geocode/json?address='+zipcode,
+        json: true
+    }
+
+    request(options, callback)
+}
+
+function parseCity(body){
+    try{
+        let address = body.results[0].formatted_address;
+        let zippos = address.search(/[0-9]/);
+        return {city: address.substr(0, zippos)};
+    }catch(e){
+        return {};
+    }
 }
