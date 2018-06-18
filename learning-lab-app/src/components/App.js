@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Card, Image } from 'semantic-ui-react'
 import Header from "./Header/Header.js";
 import WeatherData from "./WeatherCard/WeatherData.js";
+import TrafficCard from "./TrafficCard/TrafficCard.js";
 
 
 import './App.css';
@@ -19,7 +21,10 @@ class App extends Component {
     return (
       <div className = "App">
         <Header />
-        <WeatherData type="weather" units="imperial" zipcode="22209" />
+        <div class="ui link cards">
+          <WeatherData type="weather" units="imperial" zipcode="22209" />
+          <TrafficCard />
+        </div>
       </div>
     );
   }

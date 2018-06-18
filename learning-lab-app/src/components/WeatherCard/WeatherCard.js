@@ -16,7 +16,6 @@ export default class WeatherCard extends Component{
             weatherIcon = null;
         }
         return (
-            <div className = "ui centered card">
             <Card>
                 <Image className='weatherIcon' src={weatherIcon} size='small' centered />
                 <Card.Content>
@@ -34,7 +33,6 @@ export default class WeatherCard extends Component{
                     <ZipForm value={this.props.zipcode} handler={this.props.handleZipChange} />
                 </Card.Content>
             </Card>
-            </div>
         )
     }
 }

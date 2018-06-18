@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Title from "./Title.js";
+import MenuHeader from "./MenuHeader.js";
 
 class Header extends Component {
 
   render() {
     return (
-      <Title />
+      <MenuHeader />
     );
   }
 }
