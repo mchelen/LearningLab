@@ -48,7 +48,7 @@ export default class WeatherData extends Component{
 }
 
 function getWeather(callback, type, zipcode, units){
-    const apikey = '9dd566342853579b7ca76a7f2125741e';
+    const apikey = process.env.REACT_APP_WEATHER_API_KEY;
     var qstring = type+'?zip='+zipcode+'&units='+units+'&APPID='+apikey;
     var options = {
         url: 'http://api.openweathermap.org/data/2.5/'+qstring,
