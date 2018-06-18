@@ -5,6 +5,8 @@ LearningLab is a web application project by two interns at STSI, Jimmy Flores an
 
 ## Prerequisites
 
+You must have [Node.js](https://nodejs.org/en/) installed to run this app. Required libraries will be automatically installed by npm when running the app for the first time.
+
 ## Installing
 ```
 npm start
