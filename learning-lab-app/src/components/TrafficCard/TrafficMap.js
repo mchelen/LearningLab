@@ -11,7 +11,7 @@ const MapWithTraffic = withScriptjs(withGoogleMap(props =>
 const TrafficMap = props => (
      <MapWithTraffic
         googleMapURL={'https://maps.googleapis.com/maps/api/js?key='+
-            'AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg'}
+            process.env.REACT_APP_GMAPS_API_KEY}
         loadingElement={<div style={{ height: `100%`, width: `100%` }} />}
         containerElement={<div style={{ height: `100%`, width: `100%` }} />}
         mapElement={<div style={{ height: `100%`, width: `100%` }} />}
