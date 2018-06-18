@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Card, Image } from 'semantic-ui-react'
 import ZipForm from "./ZipForm.js";
-import Time from "./Time.js";
+import Time from "../Helpers/Time.js";
 
 import './WeatherCard.css';
 

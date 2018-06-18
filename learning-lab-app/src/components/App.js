@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Card, Image } from 'semantic-ui-react'
 import Header from "./Header/Header.js";
 import WeatherData from "./WeatherCard/WeatherData.js";
 import TrafficCard from "./TrafficCard/TrafficCard.js";
@@ -20,9 +19,11 @@ class App extends Component {
     return (
       <div className = "App">
         <Header />
-        <div class="ui link cards">
-          <WeatherData type="weather" units="imperial" zipcode="22209" />
-          <TrafficCard />
+        <div class="ui centered cards">
+          <div class="ui link cards">
+            <WeatherData type="weather" units="imperial" zipcode="22209" />
+            <TrafficCard />
+          </div>
         </div>
       </div>
     );
