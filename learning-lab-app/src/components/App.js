@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header from "./Header";
-import WeatherData from "./WeatherData.js";
+import Header from "./Header/Header";
+import WeatherData from "./WeatherCard/WeatherData.js";
 
 
 import './App.css';

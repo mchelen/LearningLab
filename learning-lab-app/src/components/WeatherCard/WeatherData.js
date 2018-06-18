@@ -41,7 +41,7 @@ export default class WeatherData extends Component{
 
     render(){
         return (
-            <WeatherCard data={this.state.weather} zipcode={this.state.zipcode} 
+            <WeatherCard data={this.state.weather} zipcode={this.state.zipcode}
             handleZipChange={this.handleZipChange} city={this.state.city} />
         );
     }

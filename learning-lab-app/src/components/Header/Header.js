@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Title from "./Header/Title";
-import './App.css';
+import Title from "./Title";
 
 class Header extends Component {
 
