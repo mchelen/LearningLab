@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from "./Header/Header.js";
 import WeatherData from "./WeatherCard/WeatherData.js";
 
-
 import './App.css';
 
 
