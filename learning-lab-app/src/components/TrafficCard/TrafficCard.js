@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Image } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
 import TrafficMap from "./TrafficMap.js";
 import Time from "../Helpers/Time.js";
 

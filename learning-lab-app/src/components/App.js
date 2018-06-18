@@ -19,8 +19,8 @@ class App extends Component {
     return (
       <div className = "App">
         <Header />
-        <div class="ui centered cards">
-          <div class="ui link cards">
+        <div className="ui centered cards">
+          <div className="ui link cards">
             <WeatherData type="weather" units="imperial" zipcode="22209" />
             <TrafficCard />
           </div>
