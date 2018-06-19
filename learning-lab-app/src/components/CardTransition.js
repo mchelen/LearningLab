@@ -5,13 +5,13 @@ export default class CardTransition extends Component {
     constructor(props){
         super(props);
         this.state = {
-            card: this.props.card,
+            index: this.props.index,
             visible: true
         };
     }
 
     componentDidUpdate(prevProps){
-        if(this.props.card !== prevProps.card){
+        if(this.props.index !== prevProps.index){
             this.setState({
                 visible: false
             });
@@ -20,15 +20,17 @@ export default class CardTransition extends Component {
 
     render(){
         return (
-            <Transition animation='fade' duration={2000} visible={this.state.visible} onHide={
-                () => this.setState({
-                    card: this.props.card
-                }, () => this.setState({
-                    visible: true
-                }))
-            } onStart={() => console.log(this.state.visible)}>
-                {this.state.card}
-            </Transition>
+            <div>
+                <Transition animation='fade' duration={2000} visible={this.state.visible} onHide={
+                    () => this.setState({
+                        index: this.props.index
+                    }, () => this.setState({
+                        visible: true
+                    }))
+                }>
+                    {React.Children.toArray(this.props.children)[this.state.index]}
+                </Transition>
+            </div>
         )
     }
 }
