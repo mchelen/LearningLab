@@ -11,7 +11,7 @@ export default class CardContainer extends Component {
 
         this.showNextCard = this.showNextCard.bind(this);
     }
-    
+
     componentDidMount(){
         this.updateTimer = setInterval(() => this.showNextCard(), 10000);
     }
