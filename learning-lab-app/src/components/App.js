@@ -25,7 +25,7 @@ class App extends Component {
             <WeatherData type="weather" units="imperial" zipcode="22209" />
             <TrafficCard />
           </CardContainer>
-      </div>
+        </div>
       </div>
     );
   }
