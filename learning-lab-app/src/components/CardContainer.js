@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import CardTransition from "./CardTransition.js";
 
 export default class CardContainer extends Component {
     constructor(props){
@@ -12,9 +13,17 @@ export default class CardContainer extends Component {
 
         this.showNextCard = this.showNextCard.bind(this);
     }
+    
+    componentDidMount(){
+        this.updateTimer = setInterval(() => this.showNextCard(), 10000);
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.updateTimer);
+    }
 
     showNextCard(){
-        let newIndex = (index+1) % React.Children.count(this.props.children);
+        let newIndex = (this.state.index+1) % React.Children.count(this.props.children);
         let nextCard = React.Children.toArray(this.props.children)[newIndex];
         this.setState({
             index: newIndex,
@@ -24,7 +33,7 @@ export default class CardContainer extends Component {
 
     render(){
         return (
-            <CardTransition index={this.state.index} card={this.state.currentCard} />
+            <CardTransition card={this.state.currentCard} />
         );
     }
 }
