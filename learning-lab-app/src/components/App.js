@@ -19,13 +19,17 @@ class App extends Component {
   render() {
     return (
       <div className = "App">
-          <Header />
+            <Header />
         <div className="ui centered cards">
+          <div class="ui grid">
+            <div class="row">
+            </div>
           <CardContainer>
-            <WeatherData type="weather" units="imperial" zipcode="22209" />
-            <TrafficCard />
+              <WeatherData type="weather" units="imperial" zipcode="22209" />
+              <TrafficCard />
           </CardContainer>
         </div>
+      </div>
       </div>
     );
   }
