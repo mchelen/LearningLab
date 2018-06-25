@@ -1,18 +1,25 @@
 {
-  "name": "react-backend",
-  "version": "0.0.0",
+  "name": "learning-lab-app",
+  "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
   "dependencies": {
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.16.0",
-    "google-maps-react": "^2.0.2",
-    "http-errors": "~1.6.2",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.0",
-    "react-google-maps": "^9.4.5"
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-google-maps": "^9.4.5",
+    "react-scripts": "1.1.4",
+    "react-time": "^4.3.0",
+    "request": "^2.87.0",
+    "semantic-ui-react": "^0.81.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "coverage": "react-scripts test --env=jsdom --coverage",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3001",
+  "devDependencies": {
+    "coveralls": "^3.0.1"
   }
 }
