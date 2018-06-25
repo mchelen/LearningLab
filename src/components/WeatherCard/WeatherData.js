@@ -17,11 +17,9 @@ export default class WeatherData extends Component{
     }
 
     componentDidMount(){
-        this.updateTimer = setInterval(() => this.refreshData(), 60000);
     }
 
     componentWillUnmount(){
-        clearInterval(this.updateTimer);
     }
 
     handleZipChange(event){
