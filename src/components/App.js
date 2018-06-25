@@ -7,7 +7,7 @@ import CardContainer from "./CardContainer.js";
 import './App.css';
 
 
-class App extends Component {
+export default class App extends Component {
  // state = {users: []}
 //
 //   componentDidMount() {
@@ -16,23 +16,20 @@ class App extends Component {
 //       .then(users => this.setState({ users }));
 //   }
 
-  render() {
-    return (
-      <div className = "App">
-            <Header />
-        <div className="ui centered cards">
-          <div class="ui grid">
-            <div class="row">
+    render() {
+        return (
+            <div className="App">
+                <Header />
+                <div className="ui centered cards">
+                    <div className="ui grid">
+                        <div className="row" />
+                        <CardContainer>
+                            <WeatherData type="weather" units="imperial" zipcode="22209" />
+                            <TrafficCard />
+                        </CardContainer>
+                    </div>
+                </div>
             </div>
-          <CardContainer>
-              <WeatherData type="weather" units="imperial" zipcode="22209" />
-              <TrafficCard />
-          </CardContainer>
-        </div>
-      </div>
-      </div>
-    );
-  }
+        );
+    }
 }
-
-export default App;
