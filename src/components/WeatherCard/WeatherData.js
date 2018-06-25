@@ -13,28 +13,41 @@ export default class WeatherData extends Component{
         };
         this.handleZipChange = this.handleZipChange.bind(this);
         this.refreshData = this.refreshData.bind(this);
-        this.refreshData();
+        this.mounted = false;
     }
 
     componentDidMount(){
+        this.mounted = true;
+        this.refreshData();
     }
 
     componentWillUnmount(){
+        this.mounted = false;
     }
 
     handleZipChange(event){
-        this.setState({zipcode: event.target.value}, () => {
-            if(this.state.zipcode.match(/^[0-9]{5}$/)){ //make sure it's a zip code
-                this.refreshData();
-            }
-        });
+        if(this.mounted){
+            this.setState({zipcode: event.target.value}, () => {
+                if(this.state.zipcode.match(/^[0-9]{5}$/)){ //make sure it's a zip code
+                    this.refreshData();
+                }
+            });
+        }
     }
 
     refreshData(){
-        getWeather((err, res, body) => this.setState({
-            weather: body
-        }), this.props.type, this.state.zipcode, this.props.units);
-        getCity((err, res, body) => this.setState(parseCity(body)), this.state.zipcode);
+        getWeather((err, res, body) => {
+            if(this.mounted){
+                this.setState({
+                    weather: body
+                });
+            }
+        }, this.props.type, this.state.zipcode, this.props.units);
+        getCity((err, res, body) => {
+            if(this.mounted){
+                this.setState(parseCity(body));
+            }
+        }, this.state.zipcode);
     }
 
     render(){
