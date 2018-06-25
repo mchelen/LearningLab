@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from "./Header/Header.js";
 import WeatherData from "./WeatherCard/WeatherData.js";
 import TrafficCard from "./TrafficCard/TrafficCard.js";
-import CardContainer from "./CardContainer.js";
+import CardContainer from "./CardContainer/CardContainer.js";
 
 import './App.css';
 
