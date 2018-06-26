@@ -22,6 +22,11 @@
   font-size: large;
 }
 
+.ui.card {
+  width: 500px;
+  padding: 1px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

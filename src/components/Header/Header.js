@@ -20,6 +20,11 @@ export default class Header extends Component {
         return (
             <Menu>
                 <Menu.Item header>STSI Learning Lab</Menu.Item>
+                    <Menu.Item
+                        name='Card Archives'
+                        active={this.state.activeItem === 'aboutUs'}
+                        onClick={this.handleItemClick}
+                    />
                 <Menu.Item
                     name='aboutUs'
                     active={this.state.activeItem === 'aboutUs'}

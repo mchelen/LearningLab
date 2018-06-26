@@ -5,7 +5,7 @@ import Time from "../Helpers/Time.js";
 
 const TrafficCard = (props) => (
     <Card>
-        <TrafficMap zoom={12} lat={38.9} lng={-77.08}/>
+        <TrafficMap zoom={12} lat={38.9} lng={-77.08} />
         <Card.Content>
             <Card.Header>
                 <p>Arlington, VA</p>
@@ -15,6 +15,8 @@ const TrafficCard = (props) => (
                     <Time />
                 </span>
             </Card.Meta>
+        </Card.Content>
+        <Card.Content extra>
             <Card.Description className='traffic'>
                 <p>Current traffic in STSI area</p>
             </Card.Description>
