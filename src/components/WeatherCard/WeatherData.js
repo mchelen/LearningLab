@@ -41,7 +41,7 @@ export default class WeatherData extends Component{
                     weather: body
                 });
             }
-        }, this.props.type, this.state.zipcode, this.props.units);
+        }, this.props.type, this.state.zipcode);
         getCity((err, res, body) => {
             if(this.mounted){
                 this.setState(parseCity(body));
@@ -61,8 +61,9 @@ export default class WeatherData extends Component{
     }
 }
 
-function getWeather(callback, type, zipcode, units){
+function getWeather(callback, type, zipcode){
     const apikey = process.env.REACT_APP_WEATHER_API_KEY;
+    const units = 'imperial';
     var qstring = type+'?zip='+zipcode+'&units='+units+'&APPID='+apikey;
     var options = {
         url: 'http://api.openweathermap.org/data/2.5/'+qstring,

@@ -1,11 +1,11 @@
 import React from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, TrafficLayer } from 'react-google-maps';
 
-const MapWithTraffic = withScriptjs(withGoogleMap((props) =>
+const MapWithTraffic = withScriptjs(withGoogleMap((props) => (
     <GoogleMap {...props}>
         <TrafficLayer autoUpdate />
     </GoogleMap>
-));
+)));
 
 //NOTE: need to get our own API key
 const TrafficMap = (props) => (

@@ -7,12 +7,16 @@ import './WeatherCard.css';
 
 export default class WeatherCard extends Component{
     render(){
-        let temperature, weatherIcon;
+        let temperature;
         try{
             temperature = this.props.data.main.temp;
-            weatherIcon = 'http://openweathermap.org/img/w/'+this.props.data.weather[0].icon+'.png';
         }catch(e){
             temperature = null;
+        }
+        let weatherIcon;
+        try{
+            weatherIcon = 'http://openweathermap.org/img/w/'+this.props.data.weather[0].icon+'.png';
+        }catch(e){
             weatherIcon = null;
         }
         return (

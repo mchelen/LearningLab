@@ -20,15 +20,19 @@ export default class CardTransition extends Component {
 
     render(){
         return (
-            <Transition animation='fade' duration={2000} visible={this.state.visible} onHide={
-                () => this.setState({
+            <Transition
+                animation='fade'
+                duration={this.props.fadeTime}
+                visible={this.state.visible}
+                onHide={
+                    () => this.setState({
                         index: this.props.index
                     },
                     () => this.setState({
                         visible: true
-                    })
-                )
-            }>
+                    }))
+                }
+            >
                 <div>
                     {React.Children.toArray(this.props.children)[this.state.index]}
                 </div>

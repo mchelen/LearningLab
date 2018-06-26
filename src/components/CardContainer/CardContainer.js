@@ -10,7 +10,7 @@ export default class CardContainer extends Component {
     }
 
     componentDidMount(){
-        this.updateTimer = setInterval(() => this.showNextCard(), 10000);
+        this.updateTimer = setInterval(() => this.showNextCard(), this.props.cardDuration);
     }
 
     componentWillUnmount(){
@@ -26,7 +26,7 @@ export default class CardContainer extends Component {
 
     render(){
         return (
-            <CardTransition index={this.state.index}>
+            <CardTransition index={this.state.index} fadeTime={this.props.fadeTime}>
                 {this.props.children}
             </CardTransition>
         );
