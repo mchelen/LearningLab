@@ -19,20 +19,22 @@ export default class WeatherCard extends Component{
             <Card>
                 <Image className='weatherIcon' src={weatherIcon} size='small' centered />
                 <Card.Content>
-                    <Card.Header>{this.props.city}</Card.Header>
+                    <Card.Header>
+                        {this.props.city}
+                    </Card.Header>
                     <Card.Meta>
                         <span className='time'>
-                        <Time />
+                            <Time />
                         </span>
                     </Card.Meta>
-                        <Card.Description className='temperature'>
+                    <Card.Description className='temperature'>
                         {Math.round(temperature)+'\u00b0F'}
-                        </Card.Description>
+                    </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
                     <ZipForm value={this.props.zipcode} handler={this.props.handleZipChange} />
                 </Card.Content>
             </Card>
-        )
+        );
     }
 }
