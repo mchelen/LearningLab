@@ -1,34 +1,33 @@
 import React, { Component } from 'react'
 
 export default class Time extends Component {
-    constructor(props) {
+    constructor(props){
         super(props);
         this.state = {
-            time: new Date()
+            time: null
         };
+        this.tick = this.tick.bind(this);
     }
 
-    componentDidMount() {
-        this.intervalID = setInterval(
-            () => this.tick(),
-            1000
-        );
+    componentDidMount(){
+        this.tick();
+        this.intervalID = setInterval(this.tick, 1000);
     }
     
-    componentWillUnmount() {
+    componentWillUnmount(){
         clearInterval(this.intervalID);
     }
     
-    tick() {
+    tick(){
         this.setState({
-            time: new Date()
+            time: new Date().toLocaleString()
         });
     }
     
-    render() {
+    render(){
         return (
             <p className="App-clock">
-                {this.state.time.toLocaleString()}
+                {this.state.time}
             </p>
         );
     }
