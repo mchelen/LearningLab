@@ -22,7 +22,7 @@ export default class App extends Component {
                 <div className='ui centered cards'>
                     <div className='ui grid'>
                         <div className='row' />
-                        <CardContainer>
+                        <CardContainer cardDuration={10000} fadeTime={1000}>
                             <WeatherData
                                 type='weather'
                                 zipcode='22209'
