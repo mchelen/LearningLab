@@ -1,12 +1,31 @@
-import React, { Component } from 'react';
-import MenuHeader from "./MenuHeader.js";
+import React, { Component } from 'react'
+import { Menu } from 'semantic-ui-react'
 
-class Header extends Component {
+export default class Header extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            activeItem: null
+        };
+        this.handleItemClick = this.handleItemClick.bind(this);
+    }
 
-  render() {
-    return (
-      <MenuHeader />
-    );
-  }
+    handleItemClick(event, {name}){
+        this.setState({
+            activeItem: name
+        });
+    }
+
+    render(){
+        return (
+            <Menu>
+                <Menu.Item header>STSI Learning Lab</Menu.Item>
+                <Menu.Item
+                    name='aboutUs'
+                    active={this.state.activeItem === 'aboutUs'}
+                    onClick={this.handleItemClick}
+                />
+            </Menu>
+        );
+    }
 }
-export default Header;
