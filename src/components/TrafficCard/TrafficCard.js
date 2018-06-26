@@ -1,4 +1,4 @@
-import React, from 'react';
+import React from 'react';
 import { Card } from 'semantic-ui-react'
 import TrafficMap from "./TrafficMap.js";
 import Time from "../Helpers/Time.js";
