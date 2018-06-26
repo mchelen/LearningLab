@@ -12,7 +12,6 @@ export default class WeatherData extends Component{
             city: null
         };
         this.handleZipChange = this.handleZipChange.bind(this);
-        this.refreshData = this.refreshData.bind(this);
         this.mounted = false;
     }
 
@@ -52,8 +51,12 @@ export default class WeatherData extends Component{
 
     render(){
         return (
-            <WeatherCard data={this.state.weather} zipcode={this.state.zipcode}
-            handleZipChange={this.handleZipChange} city={this.state.city} />
+            <WeatherCard
+                data={this.state.weather}
+                zipcode={this.state.zipcode}
+                handleZipChange={this.handleZipChange}
+                city={this.state.city}
+            />
         );
     }
 }

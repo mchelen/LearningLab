@@ -8,8 +8,6 @@ export default class CardContainer extends Component {
         this.state = {
             index: 0,
         }
-
-        this.showNextCard = this.showNextCard.bind(this);
     }
 
     componentDidMount(){
