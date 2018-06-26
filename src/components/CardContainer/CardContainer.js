@@ -4,7 +4,6 @@ import CardTransition from "./CardTransition.js";
 export default class CardContainer extends Component {
     constructor(props){
         super(props);
-
         this.state = {
             index: 0,
         }

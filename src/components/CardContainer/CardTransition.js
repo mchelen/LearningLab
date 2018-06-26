@@ -22,10 +22,12 @@ export default class CardTransition extends Component {
         return (
             <Transition animation='fade' duration={2000} visible={this.state.visible} onHide={
                 () => this.setState({
-                    index: this.props.index
-                }, () => this.setState({
-                    visible: true
-                }))
+                        index: this.props.index
+                    },
+                    () => this.setState({
+                        visible: true
+                    })
+                )
             }>
                 <div>
                     {React.Children.toArray(this.props.children)[this.state.index]}
