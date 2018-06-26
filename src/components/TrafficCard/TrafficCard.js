@@ -18,7 +18,7 @@ export default class TrafficCard extends Component{
                       </span>
                     </Card.Meta>
                         <Card.Description className='traffic'>
-                          <p> Current traffic in area. </p>
+                          <p> Current traffic in STSI area </p>
                         </Card.Description>
                 </Card.Content>
             </Card>
