@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
 
+import './Header.css';
+
+
 export default class Header extends Component {
     constructor(props){
         super(props);
@@ -19,10 +22,11 @@ export default class Header extends Component {
     render(){
         return (
             <Menu>
-                <Menu.Item header>STSI Learning Lab</Menu.Item>
+                <Menu.Item name = 'STSI Learning Lab'
+                    />
                     <Menu.Item
-                        name='Card Archives'
-                        active={this.state.activeItem === 'aboutUs'}
+                        name='CardArchives'
+                        active={this.state.activeItem === 'Card Archives'}
                         onClick={this.handleItemClick}
                     />
                 <Menu.Item
