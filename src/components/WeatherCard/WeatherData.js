@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import WeatherCard from './WeatherCard.js';
-
-var request = require('request');
+import { getWeather, getCity, parseCity } from './APIfuncs.js';
 
 export default class WeatherData extends Component{
     constructor(props){
@@ -58,36 +57,5 @@ export default class WeatherData extends Component{
                 city={this.state.city}
             />
         );
-    }
-}
-
-function getWeather(callback, type, zipcode){
-    const apikey = process.env.REACT_APP_WEATHER_API_KEY;
-    const units = 'imperial';
-    var qstring = type+'?zip='+zipcode+'&units='+units+'&APPID='+apikey;
-    var options = {
-        url: 'http://api.openweathermap.org/data/2.5/'+qstring,
-        json: true
-    };
-
-    request(options, callback);
-}
-
-function getCity(callback, zipcode){
-    var options = {
-        url: 'http://maps.googleapis.com/maps/api/geocode/json?address='+zipcode,
-        json: true
-    }
-
-    request(options, callback)
-}
-
-function parseCity(body){
-    try{
-        let address = body.results[0].formatted_address;
-        let zippos = address.search(/[0-9]/);
-        return {city: address.substr(0, zippos)};
-    }catch(e){
-        return {};
     }
 }
