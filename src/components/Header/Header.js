@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Menu, Dropdown } from 'semantic-ui-react'
 
 import './Header.css';
 
@@ -23,18 +23,25 @@ export default class Header extends Component {
         return (
             <Menu>
                 <Menu.Item
-                    name='STSI Learning Lab'
-                />
-                <Menu.Item
-                    name='CardArchives'
-                    active={this.state.activeItem === 'CardArchives'}
-                    onClick={this.handleItemClick}
-                />
-                <Menu.Item
-                    name='aboutUs'
-                    active={this.state.activeItem === 'aboutUs'}
-                    onClick={this.handleItemClick}
-                />
+                    active={this.state.activeItem === 'home'}
+                    href='/home/'
+                    onClick={this.handleItemClick}>
+                    <img src="https://stsiinc.com/wp-content/uploads/2016/03/STSI_white_500x162.png" style= {{width:'100px', height:'33px'}}/>
+                    </Menu.Item>
+                <Menu.Menu position = 'right'>
+                    <Dropdown item text='Card Archives'>
+                    <Dropdown.Menu>
+                    <Dropdown.Item>Weather Card</Dropdown.Item>
+                    <Dropdown.Item>Traffic Card</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+                    <Menu.Item
+                        name='aboutUs'
+                        active={this.state.activeItem === 'aboutUs'}
+                        href='/aboutUs/'
+                        onClick={this.handleItemClick}
+                        />
+                </Menu.Menu>
             </Menu>
         );
     }
