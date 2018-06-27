@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TrafficCard from './TrafficCard.js';
+import Header from './Header.js';
 
-it('renders without crashing', (done) => {
+it('handles item click', (done) => {
     const div = document.createElement('div');
-    ReactDOM.render(<TrafficCard zoom={12} lat={0} lng={0} location='test' description='test' />, div);
+    let component = ReactDOM.render(<Header />, div);
+    component.handleItemClick({}, {name: 'test'});
     setTimeout(() => {
         ReactDOM.unmountComponentAtNode(div);
         done();
