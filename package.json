@@ -22,5 +22,11 @@
   "proxy": "http://localhost:3001",
   "devDependencies": {
     "coveralls": "^3.0.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js"
+    ]
   }
 }
