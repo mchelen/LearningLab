@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Card } from 'semantic-ui-react';
-import CardContainer from "./CardContainer.js";
+import CardContainer from './CardContainer.js';
 
 it('transitions between cards without crashing', (done) => {
     const div = document.createElement('div');

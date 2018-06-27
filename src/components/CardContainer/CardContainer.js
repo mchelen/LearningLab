@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardTransition from "./CardTransition.js";
+import CardTransition from './CardTransition.js';
 
 export default class CardContainer extends Component {
     constructor(props){

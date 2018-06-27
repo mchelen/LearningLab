@@ -22,13 +22,14 @@ export default class Header extends Component {
     render(){
         return (
             <Menu>
-                <Menu.Item name = 'STSI Learning Lab'
-                    />
-                    <Menu.Item
-                        name='CardArchives'
-                        active={this.state.activeItem === 'Card Archives'}
-                        onClick={this.handleItemClick}
-                    />
+                <Menu.Item
+                    name='STSI Learning Lab'
+                />
+                <Menu.Item
+                    name='CardArchives'
+                    active={this.state.activeItem === 'CardArchives'}
+                    onClick={this.handleItemClick}
+                />
                 <Menu.Item
                     name='aboutUs'
                     active={this.state.activeItem === 'aboutUs'}
