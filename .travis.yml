@@ -7,3 +7,7 @@ cache:
     - "node_modules"
 notifications:
   slack: stsiinc:pAsVjY5Hb5NxQ6RPOhYmuLuv
+    branches:
+      only:
+        - "master"
+        - "Develop"
