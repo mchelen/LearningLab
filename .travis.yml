@@ -2,12 +2,9 @@ language: node_js
 node_js:
   - "node"
 script: "npm run coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
-cache:
-  directories:
-    - "node_modules"
 notifications:
-  slack: stsiinc:pAsVjY5Hb5NxQ6RPOhYmuLuv
   branches:
     only:
       - "master"
       - "Develop"
+  slack: stsiinc:pAsVjY5Hb5NxQ6RPOhYmuLuv
