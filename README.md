@@ -63,7 +63,7 @@ repo_token: YOUR_REPO_TOKEN_GOES_HERE
 [Semantic UI React](https://react.semantic-ui.com) is included as a dependency in this project and used to create the cards. The CSS file is include via a link tag in ./src/index.html
 
 # Contributing
-Please read [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 # Authors
 * Jimmy Flores
