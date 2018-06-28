@@ -5,7 +5,7 @@ export default class CardContainer extends Component {
     constructor(props){
         super(props);
         this.state = {
-            index: 0,
+            index: 0
         }
     }
 
@@ -15,6 +15,22 @@ export default class CardContainer extends Component {
 
     componentWillUnmount(){
         clearInterval(this.updateTimer);
+    }
+
+    componentDidUpdate(prevProps){
+        if(this.props.fixedCard !== prevProps.fixedCard){
+            if(this.props.fixedCard === null){
+                this.updateTimer = setInterval(() => this.showNextCard(), this.props.cardDuration);
+                this.setState({
+                    index: 0
+                });
+            }else{
+                clearInterval(this.updateTimer);
+                this.setState({
+                    index: this.props.fixedCard
+                });
+            }
+        }
     }
 
     showNextCard(){
