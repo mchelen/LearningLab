@@ -5,3 +5,5 @@ script: "npm run coverage && cat ./coverage/lcov.info | ./node_modules/coveralls
 cache:
   directories:
     - "node_modules"
+ notifications:
+    slack: stsiinc:pAsVjY5Hb5NxQ6RPOhYmuLuv

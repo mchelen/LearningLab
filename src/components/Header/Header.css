@@ -23,3 +23,8 @@ div.ui.item.dropdown:hover {
     background-color: #f25253 !important;
     color: white !important;
 }
+
+.ui.menu .ui.dropdown .menu>.item:hover {
+    background-color: #FFF !important;
+    color: #f25253 !important;
+}
