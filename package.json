@@ -1,0 +1,32 @@
+{
+  "name": "learning-lab-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "npm-font-source-sans-pro": "^1.0.2",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-google-maps": "^9.4.5",
+    "react-scripts": "1.1.4",
+    "react-time": "^4.3.0",
+    "request": "^2.87.0",
+    "semantic-ui-react": "^0.81.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "coverage": "react-scripts test --env=jsdom --coverage",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3001",
+  "devDependencies": {
+    "coveralls": "^3.0.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js"
+    ]
+  }
+}
