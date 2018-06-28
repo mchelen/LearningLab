@@ -3,8 +3,8 @@ node_js:
   - "node"
 script: "npm run coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
 notifications:
-  branches:
-    only:
+  slack: stsiinc:pAsVjY5Hb5NxQ6RPOhYmuLuv
+  on:
+    branch:
       - "master"
       - "Develop"
-  slack: stsiinc:pAsVjY5Hb5NxQ6RPOhYmuLuv
