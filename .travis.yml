@@ -5,6 +5,4 @@ script: "npm run coverage && cat ./coverage/lcov.info | ./node_modules/coveralls
 notifications:
   slack: stsiinc:pAsVjY5Hb5NxQ6RPOhYmuLuv
   on:
-    branch:
-      - "master"
-      - "Develop"
+    branch: Develop
