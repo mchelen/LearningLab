@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
-import Header from './Header/Header.js';
-import Footer from './Footer/Footer.js';
-import WeatherData from './WeatherCard/WeatherData.js';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
+import Header from './../Header/Header.js';
+import Footer from './../Footer/Footer.js';
+import WeatherData from './../WeatherCard/WeatherData.js';
 
-import './App.css';
+import './../App.css';
 
 
 export default class WeatherCardArchive extends Component {
