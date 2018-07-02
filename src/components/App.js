@@ -15,10 +15,10 @@ export default class App extends Component {
         return (
             <Router>
             <div className='App'>
-                    <Route path="/" exact component={home}/>
-                    <Route path="/aboutUs" component={AboutUs}/>
-                    <Route path="/WeatherCard" component={WeatherCardArchive}/>
-                    <Route path="/TrafficCard" component={TrafficCardArchive}/>
+                <Route path="/" exact component={home}/>
+                <Route path="/aboutUs" component={AboutUs}/>
+                <Route path="/WeatherCard" component={WeatherCardArchive}/>
+                <Route path="/TrafficCard" component={TrafficCardArchive}/>
             </div>
             </Router>
         );
