@@ -13,14 +13,13 @@ export default class Header extends Component {
     render(){
         return (
             <Menu>
-                <Menu.Item onClick={() => {}}>
-                    <a href = '/'>
+                <Menu.Item
+                    href = '/' >
                         <img
                             src='https://stsiinc.com/wp-content/uploads/2016/03/STSI_white_500x162.png'
                             alt='STSI'
                             style={{width:'100px', height:'33px'}}
                         />
-                    </a>
                 </Menu.Item>
                 <Menu.Menu position='right'>
                     <Dropdown item text='Card Archives'>

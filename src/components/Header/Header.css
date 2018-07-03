@@ -19,6 +19,10 @@ a.item:hover {
     border-radius: 0 0 0 0 !important;
 }
 
+.ui.menu>.item:first-child:hover {
+    background-color: #f25253 !important;
+}
+
 div.ui.item.dropdown:hover {
     background-color: #f25253 !important;
     color: white !important;
