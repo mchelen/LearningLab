@@ -4,6 +4,6 @@ import TrafficCardArchive from './TrafficCardArchive.js';
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<TrafficCard />, div);
+    ReactDOM.render(<TrafficCardArchive />, div);
     ReactDOM.unmountComponentAtNode(div);
 });
