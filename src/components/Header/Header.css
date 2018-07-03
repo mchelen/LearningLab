@@ -19,6 +19,11 @@ a.item:hover {
     border-radius: 0 0 0 0 !important;
 }
 
+.ui.menu .ui.dropdown.item .menu .item:not(.filtered):hover {
+    color: #f25253 !important;
+    background-color: #FFFFFF !important;
+}
+
 .ui.menu>.item:first-child:hover {
     background-color: #f25253 !important;
 }

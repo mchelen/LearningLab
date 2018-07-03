@@ -32,7 +32,6 @@ export default class home extends Component {
         });
 
         return (
-        <html class="home-bg">
             <div className='home'>
                 <Header
                     cardEntries={cards.map(cardToDropdown)}
@@ -48,7 +47,6 @@ export default class home extends Component {
                 </div>
                 <Footer />
             </div>
-            </html>
         );
     }
 }

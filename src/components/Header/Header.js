@@ -24,11 +24,13 @@ export default class Header extends Component {
                 <Menu.Menu position='right'>
                     <Dropdown item text='Card Archives'>
                         <Dropdown.Menu>
-                            <Dropdown.Item>
-                                <a href = '/WeatherCard'> Weather Card </a>
+                            <Dropdown.Item
+                                href='/WeatherCard'>
+                                <p> Weather Card </p>
                             </Dropdown.Item>
-                            <Dropdown.Item>
-                                <a href = '/TrafficCard'> Traffic Card </a>
+                            <Dropdown.Item
+                                href='/TrafficCard'>
+                                <p> Traffic Card </p>
                             </Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
