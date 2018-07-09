@@ -4,12 +4,6 @@ import { Menu, Grid } from 'semantic-ui-react'
 import './FullScreenHeader.css';
 
 export default class Header extends Component {
-    handleItemClick(event, {name}){
-        this.setState({
-            activeItem: name
-        });
-    }
-
     render(){
         return (
             <Menu>
