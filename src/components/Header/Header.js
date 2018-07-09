@@ -35,6 +35,10 @@ export default class Header extends Component {
                         </Dropdown.Menu>
                     </Dropdown>
                     <Menu.Item
+                        name='Raspberry Pi'
+                        href='/fullScreen/'
+                    />
+                    <Menu.Item
                         name='aboutUs'
                         href='/aboutUs/'
                         />
