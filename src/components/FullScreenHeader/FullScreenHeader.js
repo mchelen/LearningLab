@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Menu, Grid } from 'semantic-ui-react'
 
 import './FullScreenHeader.css';
 
@@ -13,7 +13,7 @@ export default class Header extends Component {
     render(){
         return (
             <Menu>
-            <Menu.Menu position='center'>
+            <Menu.Menu>
                 <Menu.Item
                     href = '/' >
                         <img
