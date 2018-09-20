@@ -15,5 +15,14 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
+  displayName: 'npm install'
+  
+- task: Npm@1
+  inputs:
     command: 'test'
-  displayName: 'npm install and build'
+  displayName: 'npm test'
+  
+- task: Npm@1
+  inputs:
+    command: 'build'
+  displayName: 'npm build'  
