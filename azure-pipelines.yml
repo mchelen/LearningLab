@@ -20,13 +20,13 @@ steps:
 - task: Npm@1
   inputs:
     command: 'custom'
-    customCommand: 'coverage'
+    customCommand: 'run coverage'
   displayName: 'npm test'
   
 - task: Npm@1
   inputs:
     command: 'custom'
-    customCommand: 'build'
+    customCommand: 'run build'
   displayName: 'npm build'  
   
   
