@@ -1,5 +1,5 @@
 # LearningLab
-LearningLab is a web application developed by two interns at STSI, Jimmy Flores and Emmett Dorlester, with the mentorship of STSI Employees Kevin Melendez and Ben Morris. The idea of LearningLab is to create a set of web applications to run on a Raspberry Pi, web applications consisting of a Weather App, a Traffic App, and more. 
+LearningLab is a web application developed by two interns at STSI, Jimmy Flores and Emmett Dorlester, with the mentorship of STSI Employees Kevin Melendez and Ben Morris. The idea of LearningLab is to create a set of web applications to run on a Raspberry Pi, web applications consisting of a Weather App, a Traffic App, and more.
 
 [![Build Status](https://travis-ci.org/STSILABS/LearningLab.svg?branch=Develop)](https://travis-ci.org/STSILABS/LearningLab)
 [![Coverage Status](https://coveralls.io/repos/github/STSILABS/LearningLab/badge.svg?branch=Develop)](https://coveralls.io/github/STSILABS/LearningLab?branch=Develop)
@@ -33,6 +33,12 @@ $ npm test             # Run tests using jest
 $ npm run coverage     # Run tests with coverage option
 $ npm run build        # Builds the application to ./dist
 ```
+
+## Environment Variables
+
+LearningLab environment variables from a .env file located in the application's root in development. There's a .env.example file which lists the environment variables you'll need to run the application. Run cp .env.example .env and then edit the file to fill in relevant values for your variables.
+
+i.e - `REACT_APP_WEATHER_API_KEY=[YOUR_WEATHER_API_KEY]`
 
 ## Travis CI
 We use Travis as our Continuous Integration pipeline to check in code and run our tests with each build.
@@ -68,4 +74,3 @@ Please read [CONTRIBUTING.md](/CONTRIBUTING.md) for details on our code of condu
 # Authors
 * Jimmy Flores
 * Emmett Dorlester
-
