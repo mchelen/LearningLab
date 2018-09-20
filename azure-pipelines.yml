@@ -19,10 +19,14 @@ steps:
   
 - task: Npm@1
   inputs:
-    command: 'test'
+    command: 'custom'
+    customCommand: 'test'
   displayName: 'npm test'
   
 - task: Npm@1
   inputs:
-    command: 'build'
+    command: 'custom'
+    customCommand: 'build'
   displayName: 'npm build'  
+  
+  
